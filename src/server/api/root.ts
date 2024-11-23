@@ -1,5 +1,5 @@
-import { postRouter } from "~/server/api/routers/post";
-import { createCallerFactory, createTRPCRouter } from "~/server/api/trpc";
+import { createCallerFactory, createTRPCRouter, publicProcedure } from "~/server/api/trpc";
+import { z } from "zod";
 
 /**
  * This is the primary router for your server.
@@ -7,7 +7,13 @@ import { createCallerFactory, createTRPCRouter } from "~/server/api/trpc";
  * All routers added in /api/routers should be manually added here.
  */
 export const appRouter = createTRPCRouter({
-  post: postRouter,
+  submitImage: publicProcedure
+    .input(z.object({ imageb64: z.string().min(1) }))
+    .output(z.string())
+    .mutation(({ input }) => {
+      console.log(input.imageb64);
+      return input.imageb64;
+    }),
 });
 
 // export type definition of API
