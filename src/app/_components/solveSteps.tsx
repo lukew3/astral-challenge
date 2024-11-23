@@ -1,8 +1,8 @@
-import { InlineMath, BlockMath } from 'react-katex';
+import { BlockMath } from 'react-katex';
 import styles from '../index.module.css';
 
 export default function SolveSteps({ steps }: { steps: { desc: string, code: string }[] }) {
-    let d = {};
+    let d: { [key: string]: any } = {};
     let newSteps: string[] = [];
     steps.forEach(step => {
         const code = step.code;
