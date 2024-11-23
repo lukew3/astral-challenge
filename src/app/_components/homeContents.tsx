@@ -1,10 +1,11 @@
 "use client";
 import  { useState } from 'react';
 import WebcamCapture from './webcamCapture';
+import SolveContents from './solveContents';
 
 export default function HomeContents() {
     const [imageSrc, setImageSrc] = useState("");
-    const [steps, setSteps] = useState<{}[]>([]);
+    const [steps, setSteps] = useState<{ desc: string, code: string}[]>([]);
 
     return (
       <>
@@ -13,8 +14,12 @@ export default function HomeContents() {
                 setImageSrc={setImageSrc}
                 setSteps={setSteps}
             /> : 
-            <img src={imageSrc} alt="Captured" />
+            <SolveContents 
+                imageSrc={imageSrc}
+                steps={steps}
+            />
         }
       </>
     );
   }
+
