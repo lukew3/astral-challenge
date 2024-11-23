@@ -1,27 +1,15 @@
 import { HydrateClient } from "~/trpc/server";
 import React from "react";
 import styles from "./index.module.css";
-import WebcamCapture from "~/app/_components/webcamCapture";
+import HomeContents from "~/app/_components/homeContents";
 
 export default async function Home() {
-  let capturingFlag = false;
   return (
     <HydrateClient>
       <main className={styles.main}>
         <span className={styles.header}>Math Made Easy</span>
-        { capturingFlag ?
-          <WebcamCapture /> :
-          <SolvingMode />
-        }
+        <HomeContents />
       </main>
     </HydrateClient>
-  );
-}
-
-function SolvingMode() {
-  return (
-    <div>
-      <WebcamCapture />
-    </div>
   );
 }
