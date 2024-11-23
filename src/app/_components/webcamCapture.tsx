@@ -3,6 +3,7 @@ import React from "react";
 import Webcam from "react-webcam";
 import { useCallback, useState } from "react";
 import { api } from "~/trpc/react";
+import styles from "../index.module.css";
 
 const videoConstraints = {
   width: 1280,
@@ -32,7 +33,7 @@ const WebcamCapture = ({ setImageSrc, setSteps }: { setImageSrc: Function, setSt
         width={1280}
         videoConstraints={videoConstraints}
       />
-      <button onClick={capture}>Capture photo</button>
+      <button onClick={capture} className={styles.button}>Capture photo</button>
     </>
   );
 };

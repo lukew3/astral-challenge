@@ -2,16 +2,22 @@ import 'katex/dist/katex.min.css';
 import styles from "../index.module.css";
 import SolveSteps from './solveSteps';
 
-export default function SolveContents({ imageSrc, steps }: { imageSrc: string, steps: { desc: string, code: string }[] }) {
-    // build a map of variables to values by running all steps;
-    const variableMap = {};
+export default function SolveContents({ imageSrc, setImageSrc, steps, setSteps }: { imageSrc: string, setImageSrc: Function, steps: { desc: string, code: string }[], setSteps: Function }) {
     return (
         <>
             <img src={imageSrc} alt="Captured" width="400px" />
             <div className={styles.steps}>
                 <p>Steps:</p>
-                <SolveSteps steps={steps} />
+                {
+                    steps.length != 0 ? 
+                        <SolveSteps steps={steps} /> :
+                        <p style={{color: 'white'}}>Calculating, please wait...</p>
+                }
             </div>
+            <button onClick={() => {
+                setImageSrc("");
+                setSteps([]);
+            }} className={styles.button}>New Problem</button>
         </>
     );
 }
