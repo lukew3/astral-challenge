@@ -1,7 +1,6 @@
-# Lukew3 Astral Challenge
+# Lukew3 Astral Challenge 11/24/24
 
-Luke Weiler submission for Astral Take-Home Challenge 11/24/2024.
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+Take a picture of a math problem and get a step-by-step solution.
 
 ## Getting started
 Copy `.env.example` to a new file `.env`.
