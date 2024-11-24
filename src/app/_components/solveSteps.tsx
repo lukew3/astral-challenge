@@ -18,8 +18,8 @@ export default function SolveSteps({ steps }: { steps: { desc: string, code: str
         <div>{
             newSteps.map((step, index) => (
                 <div key={index} className={styles.step}>
-                    <span>{index})</span>
-                    <span>
+                    <span>{index+1})</span>
+                    <span style={{flexGrow: 2}}>
                         {step.split('$$').map((part, index) => {
                             if (index % 2 === 0) {
                                 return <span key={index}>{part}</span>;
