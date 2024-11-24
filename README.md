@@ -14,6 +14,7 @@ Run app in dev mode:
 ```
 npm run dev
 ```
+View in your browser at http://localhost:3000
 
 **Optional:**
 
