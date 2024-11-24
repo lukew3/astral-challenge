@@ -2,9 +2,6 @@
 
 Take a picture of a math problem and get a step-by-step solution.
 
-<img src="https://github.com/user-attachments/assets/f4ffb6ac-b5b9-46de-9c91-2426450437b2" width="400" />
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/b47ec22b-82e0-41c7-8cb3-9567b0c0ef49">
-
 ## Getting started
 Copy `.env.example` to a new file `.env`.
 Add your OPENAI_API_KEY to the `.env`. You can get one from https://platform.openai.com/api-keys. You will need to fund your account if not already funded. 
