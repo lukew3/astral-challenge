@@ -5,13 +5,12 @@ import SolveSteps from './solveSteps';
 export default function SolveContents({ imageSrc, setImageSrc, steps, setSteps }: { imageSrc: string, setImageSrc: Function, steps: { desc: string, code: string }[], setSteps: Function }) {
     return (
         <>
-            <img src={imageSrc} alt="Captured" width="400px" />
+            <img src={imageSrc} className={styles.image} alt="Captured" />
             <div className={styles.steps}>
                 <p>Steps:</p>
-                {
-                    steps.length != 0 ? 
-                        <SolveSteps steps={steps} /> :
-                        <p style={{color: 'white'}}>Calculating, please wait...</p>
+                { steps.length != 0 ?
+                    <SolveSteps steps={steps} /> :
+                    <p style={{ color: 'white' }}>Calculating, please wait...</p>
                 }
             </div>
             <button onClick={() => {

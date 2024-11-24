@@ -8,7 +8,7 @@ import styles from "../index.module.css";
 const videoConstraints = {
   width: 1280,
   height: 720,
-  facingMode: "user"
+  facingMode: "environment"
 };
 
 const WebcamCapture = ({ setImageSrc, setSteps }: { setImageSrc: Function, setSteps: Function }) => {
@@ -32,8 +32,9 @@ const WebcamCapture = ({ setImageSrc, setSteps }: { setImageSrc: Function, setSt
         screenshotFormat="image/jpeg"
         width={1280}
         videoConstraints={videoConstraints}
-      />
-      <button onClick={capture} className={styles.button}>Capture photo</button>
+        onClick={capture}
+      />  
+      <i>(Tap the image to take a photo of the problem)</i>
     </>
   );
 };

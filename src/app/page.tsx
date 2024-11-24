@@ -7,7 +7,6 @@ export default async function Home() {
   return (
     <HydrateClient>
       <main className={styles.main}>
-        <span className={styles.header}>Math Made Easy</span>
         <HomeContents />
       </main>
     </HydrateClient>
