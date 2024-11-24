@@ -1,8 +1,8 @@
 "use client";
 import { useState } from 'react';
-import WebcamCapture from './webcamCapture';
-import SolveContents from './solveContents';
-import styles from "../index.module.css";
+import WebcamCapture from './WebcamCapture/webcamCapture';
+import SolveContents from './SolveContents/solveContents';
+import styles from "./homeContents.module.css";
 
 export default function HomeContents() {
   const [imageSrc, setImageSrc] = useState("");

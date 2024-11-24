@@ -1,0 +1,10 @@
+.step {
+    margin-top: 10px;
+    border: 1px solid grey;
+    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #26262680;
+    display: flex;
+    gap: 8px;
+  }

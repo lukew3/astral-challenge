@@ -1,5 +1,5 @@
 import { InlineMath } from 'react-katex';
-import styles from '../index.module.css';
+import styles from './solveSteps.module.css';
 
 export default function SolveSteps({ steps }: { steps: { desc: string, code: string }[] }) {
     let d: { [key: string]: number } = {};

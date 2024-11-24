@@ -1,6 +1,6 @@
 import 'katex/dist/katex.min.css';
-import styles from "../index.module.css";
-import SolveSteps from './solveSteps';
+import styles from "./solveContents.module.css";
+import SolveSteps from './SolveSteps/solveSteps';
 
 export default function SolveContents({ imageSrc, setImageSrc, steps, setSteps }: { imageSrc: string, setImageSrc: Function, steps: { desc: string, code: string }[], setSteps: Function }) {
     return (

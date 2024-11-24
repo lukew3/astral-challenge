@@ -14,7 +14,7 @@ It is of the highest importance that the correct solution will be derived from t
 Respond in a json structured format like {steps: [{desc: "", code: ""}]}.
 Do not provide any other output.
 Each step desc should precisely describe how to perform a step.
-Math in desc should be presented as latex delimited with $$.
+Math in desc should be presented as katex-supported latex delimited with $$.
 All and only numbers in desc (including powers) must be replaced by map entries in the object D, each represented as non-repeating strings of lowercase letters of minimal length surrounded by ~~ on either side as delimiters.
 Map values should contain numbers, never strings.
 There should never be any numbers in the desc, they must be replaced by ~~entry_name~~.
