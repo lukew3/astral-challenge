@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Webcam from "react-webcam";
-import { useCallback, useState } from "react";
+import { useCallback } from "react";
 import { api } from "~/trpc/react";
 
 const videoConstraints = {
