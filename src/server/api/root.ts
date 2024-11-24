@@ -25,12 +25,11 @@ Using this data, at each step I will run the code and each variable delimited in
 The first step desc should always state the original problem and the code should initialize the numeric values as map entries.
 The subsequent steps should solve the problem incrementally.
 If no problem is detected, respond with a single step with no code and a description stating "Um, that's not a math problem".
-The last step should contain the most simplified form of the answer.
+The last step should contain the most simplified form of the answer on which no further calculations can be made.
 I'll provide you with a partial example of the format I expect:
 4x - 2 = 2
 [{"desc": "Solve for x when $$~~a~~x - ~~b~~ = ~~c~~$$", "code": "d['a'] = 4; d['b'] = 2; d['c'] = 2;"}, {"desc": "Add ~~b~~ to both sides: $$~~a~~x - ~~b~~ + ~~b~~ = ~~c~~ + ~~b~~$$ $$~~a~~x = ~~e~~$$", "code": "d['e'] = d['c'] + d['b'];"}, ...]
 `;
-// There should never be 4 ~ adjacent to each other.
 
 
 const SubmitImageResponse = z.object({
