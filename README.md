@@ -7,7 +7,7 @@ Take a picture of a math problem and get a step-by-step solution.
 
 ## Getting started
 Copy `.env.example` to a new file `.env`.
-Add your OPENAPI_API_KEY to the `.env`. You can get one from https://platform.openai.com/api-keys. You will need to fund your account if not already funded. 
+Add your OPENAI_API_KEY to the `.env`. You can get one from https://platform.openai.com/api-keys. You will need to fund your account if not already funded. 
 Install dependencies:
 ```
 npm ci
