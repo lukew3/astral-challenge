@@ -11,10 +11,10 @@ export default function SolveSteps({ imageSrc }: { imageSrc: string }) {
     }, [imageSrc]);
 
     return steps.length === 0 ?
-        <p style={{ color: 'white' }}>No steps found</p> :
-        <div>
+        <p style={{ color: 'white' }}>Steps loading...</p> :
+        <>
             {steps.map((step, index) => (
                 <Step step={step} stepNumber={index} />
             ))}
-        </div>
+        </>
 }
