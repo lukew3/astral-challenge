@@ -1,6 +1,6 @@
 # Lukew3 Astral Challenge 11/24/24
 
-Take a picture of a math problem and get a step-by-step solution.
+Take a picture of a math problem and get a step-by-step solution from chatgpt with math validated by code.
 
 ## Getting started
 Copy `.env.example` to a new file `.env`.

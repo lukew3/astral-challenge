@@ -2,20 +2,16 @@ import 'katex/dist/katex.min.css';
 import styles from "./solveContents.module.css";
 import SolveSteps from './SolveSteps/solveSteps';
 
-export default function SolveContents({ imageSrc, setImageSrc, steps, setSteps }: { imageSrc: string, setImageSrc: Function, steps: { desc: string, code: string }[], setSteps: Function }) {
+export default function SolveContents({ imageSrc, setImageSrc }: { imageSrc: string, setImageSrc: Function }) {
     return (
         <>
             <img src={imageSrc} className={styles.image} alt="Captured" />
             <div className={styles.steps}>
                 <p>Steps:</p>
-                { steps.length != 0 ?
-                    <SolveSteps steps={steps} /> :
-                    <p style={{ color: 'white' }}>Calculating, please wait...</p>
-                }
+                <SolveSteps imageSrc={imageSrc} />
             </div>
             <button onClick={() => {
                 setImageSrc("");
-                setSteps([]);
             }} className={styles.button}>New Problem</button>
         </>
     );
