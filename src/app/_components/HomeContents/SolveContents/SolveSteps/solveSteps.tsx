@@ -12,7 +12,7 @@ export default function SolveSteps({ imageSrc }: { imageSrc: string }) {
     }, [imageSrc]);
 
     return steps.length === 0 ?
-        <p style={{ color: 'white' }}>Steps loading...</p> :
+        <p style={{ color: 'white' }}>Loading, please wait around 10 seconds.</p> :
         <>
             {steps.map((step, index) => (
                 <Step
